@@ -2,14 +2,14 @@ const checkbox = document.getElementById("checkbox");
 const submitBtn = document.querySelector("button[type=submit]");
 
 //disable checkbox
-checkbox.disabled= true;
-submitBtn.disabled= true;
+checkbox.disabled = true;
+submitBtn.disabled = true;
 
 const elements = document.querySelectorAll(".element");
-const selectColor= document.getElementById("SelectColor");
+const selectColor = document.getElementById("SelectColor");
 
 // Assign color to Elements
-elements.forEach(function(element){
+elements.forEach(function (element) {
     const color = getRandomColor();
 
     element.style.backgroundColor = color;
@@ -18,10 +18,10 @@ elements.forEach(function(element){
 });
 
 //genereate random color Func
-function getRandomColor (){
+function getRandomColor() {
     const letter = "0123456789ABCDEF";
     let color = "#";
-    for (let i = 0; i < 6; i++){
+    for (let i = 0; i < 6; i++) {
         color += letter[Math.floor(Math.random() * 16)];
     }
     return color;
@@ -29,9 +29,9 @@ function getRandomColor (){
 
 //check if right color
 
-elements.forEach(function(element) {
-    element.addEventListener("click",function() {
-        if(element.innerHTML === selectColor.innerHTML) {
+elements.forEach(function (element) {
+    element.addEventListener("click", function () {
+        if (element.innerHTML === selectColor.innerHTML) {
             checkbox.checked = true;
             alert("You are Human!");
             submitBtn.disabled = false;
@@ -43,4 +43,3 @@ elements.forEach(function(element) {
         }
     });
 });
-
