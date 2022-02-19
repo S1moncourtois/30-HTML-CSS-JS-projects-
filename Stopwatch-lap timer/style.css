@@ -9,9 +9,9 @@
 }
 
 :root {
-    --dark-c: #444;
-    --gray-c: #F3F3F3;
-    --bg-c: #eee;
+    --dark-c: #2c2f33;
+    --gray-c: #99aab5;
+    --bg-c:   #ffffff;
     --border-radios: 25px;
 }
 
